@@ -1,5 +1,5 @@
 clean:
-	rm proto/hello/*.go
+	rm proto/crypto/*.go
 
 generate:
-	buf generate --path ./proto/hello/hello.proto
+	buf generate --template buf.gen.yaml --path ./proto/crypto/crypto.proto

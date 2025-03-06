@@ -1,4 +1,4 @@
 version: v1
-name: buf.build/myuser/myrepo
+name: buf.build/ginganotnigg/grpc-test
 deps:
   - buf.build/googleapis/googleapis

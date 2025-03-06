@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package crypto;
+
+option go_package = "grpc-test/proto/crypto";
+
+import "google/api/annotations.proto";
+
+service CryptoService {
+  rpc GetTopCoins (TopCoinsRequest) returns (TopCoinsResponse) {
+    option (google.api.http) = {
+        get: "/v1/crypto/top-coins"
+    };
+  }
+}
+
+message TopCoinsRequest {}
+
+message Coin {
+  string id = 1;
+  string symbol = 2;
+  string name = 3;
+  double current_price = 4;
+  double ath = 5;
+  double atl = 6;
+  double market_cap = 7;
+}
+
+message TopCoinsResponse {
+  repeated Coin coins = 1;
+}

@@ -1,0 +1,7 @@
+server:
+  host: 0.0.0.0
+  port: 8080
+  gwport: 8081
+
+coingecko:
+  url: ${COINGECKO_URL}
